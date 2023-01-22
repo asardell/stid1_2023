@@ -4,6 +4,6 @@ Ce repository est à disposition des étudiants de STID pour accéder aux conten
 
 Liste des ressources : 
 
-* [CM/](./CM/) : contient la présentation au formation PDF.
+* [CM/](./CM/) : support de présentation du module.
 * [TD1/](./TD1/) : sujet du TD1 et image du quiz.
-* [TP1/](./TP1/) : sujet du TP1 à rendre sur GitHub avant le cours suivant
+* [TP1/](./TP1/) : sujet du TP1 à rendre sur GitHub avant le cours suivant.

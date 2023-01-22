@@ -59,8 +59,7 @@ Vous utiliserez ce compte pour tous les cours de programmation statistique.
 
 #### Utiliser GitHub avec GitBash
 
-Un peu de lecture [ici](https://www.jesuisundev.com/comprendre-git-en-7-minutes/). 
-
+0. Un peu de lecture [ici](https://www.jesuisundev.com/comprendre-git-en-7-minutes/).
 1. Connecter à la branche *td1*
 2. Ajouter une modification à votre fichier **README.md**
 3. Faire un commit de cette modification sur votre branche *td1*
