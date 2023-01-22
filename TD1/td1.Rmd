@@ -57,7 +57,7 @@ Vous utiliserez ce compte pour tous les cours de programmation statistique.
 * [lien utile : connexion SSH](https://linuxhint.com/clone-repo-with-ssh-key-in-git/)
 4. Cloner votre repository *programmation_r* sur votre machine
 
-#### Utiliser GitHub avec GitBash ()
+#### Utiliser GitHub avec GitBash
 
 Un peu de lecture [ici](https://www.jesuisundev.com/comprendre-git-en-7-minutes/). 
 
