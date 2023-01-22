@@ -124,3 +124,9 @@ Pour chaque partie l'utilisateur saisit son choix au clavier et le programme ret
 
 La fonction doit retourner le nombre de partie gagnante pour l'utilisateur lorsque toutes les parties ont été jouées.
 
+Pour simuler le choix de l'ordinateur, vous pouvez utiliser la fonction suivante :
+
+```{r, echo=FALSE}
+ai_choice <- sample(x = c("Pierre","Feuille","Ciseaux"),size = 1)
+```
+
