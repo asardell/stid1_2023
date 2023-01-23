@@ -114,6 +114,12 @@ Voici la ligne de commande pour demander à l'utilisateur de saisir une valeur :
 user_choice <- readline(prompt = "Saisissez une valeur textuelle : ")
 ```
 
+Pour simuler le choix de l'ordinateur, vous pouvez utiliser la fonction suivante :
+
+```{r, eval=FALSE}
+ai_choice <- sample(x = 1:100,size = 1)
+```
+
 ## Pierre, feuille, ciseaux
 
 Dans ce jeu, l'utilisateur peut jouer plusieurs parties. La fonction prend en entrée le nombre de parties que le joueur souhaite faire.
@@ -126,7 +132,7 @@ La fonction doit retourner le nombre de partie gagnante pour l'utilisateur lorsq
 
 Pour simuler le choix de l'ordinateur, vous pouvez utiliser la fonction suivante :
 
-```{r, echo=FALSE}
+```{r, eval=FALSE}
 ai_choice <- sample(x = c("Pierre","Feuille","Ciseaux"),size = 1)
 ```
 
