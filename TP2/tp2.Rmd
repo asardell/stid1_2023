@@ -1,0 +1,136 @@
+---
+title: | 
+  | STID 1 - Programmation Statistique  
+  | TP2
+  | Algorithmique
+author: "Anthony SARDELLITTI"
+output: 
+  pdf_document:
+    toc: true
+    number_sections: true
+    toc_depth: 3
+date: "2023-01-01"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Ressources documentaires
+
+Pour réaliser ce TP, vous aurez besoin des ressources suivantes :
+
+- [Importer un fichier excel](https://asardell.github.io/programmation-r/first-import.html#import-depuis-un-fichier-excel)
+- [Fonctions de tests et comparaisons](https://asardell.github.io/programmation-r/presentation.html#fonctions-de-tests-et-comparaisons)
+- [Indexation](https://asardell.github.io/programmation-r/manipulation-objet.html#indexations-simples)
+- [Filtres et sélection](https://asardell.github.io/programmation-r/manipulation-objet.html#filtre-et-s%C3%A9lection-dans-un-data-frame)
+- [Les fonctions de tests et opérateurs de comparaison](https://asardell.github.io/programmation-r/presentation.html#fonctions-de-tests-et-comparaisons)
+- [Trier](https://asardell.github.io/programmation-r/manipulation-objet.html#trier-un-data-frame)
+- [Agréger](https://asardell.github.io/programmation-r/manipulation-objet.html#agr%C3%A9ger-des-donn%C3%A9es)
+
+# Exercices
+
+Pour rendre ce TP, voici les étapes à suivre :
+
+1. Créer une branche **tp2** sur votre repository github que vous avez déjà ouvert. Le tp sera pousser dans cette branche
+2. Dans cette branche, créer un dossier **tp2** dans lequel vous pourrez pousser le script avec votre code
+3. Si vous ne l'avez pas fait pour le TP1, partagez votre repository. Si vous êtes en public, envoyer le lien de votre repository par mail à *anthony.sardellitti@hotmail.fr* **OU** si vous êtes en privé, ajouter cette adresse mail en tant que collaborateur de votre repository. 
+
+Pensez à commenter votre code.
+
+<p>
+![Pokemon](./img/pokemon.jpg){width=500px}
+</p>
+
+On utilise  le fichier `pokemon.xlsx` qui décrit les statistiques des pokemon des deux premières générations.
+Le fichier est issu du site [ Kaggle ](https://www.kaggle.com/rounakbanik/pokemon). Il a été adapté pour ce TP. Pour réaliser ce TP, télécharger le fichier en [cliquant ici](./dataset/pokemon.xlsx). Voici une description des données :
+
+- `pokedex_number` : numéro du pokemon
+- `nom` : nom du pokemon
+- `generation` : le numéro de génération dont est issu le pokemon
+- `is_legendary` : Oui / Non si le pokemon est légendaire
+- `type` : le type du pokemon
+- `weight_kg` : le poids du pokemon en kg
+- `height_m` : la taille du pokemon en mètre
+- `attack` : la puissance d'attaque du pokemon
+- `defense` : la puissance de défense du pokemon
+- `speed` : la vitesse du pokemon
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(readxl)
+pokemon <- read_excel(path = "./dataset/pokemon.xlsx", sheet = "pokemon")
+```
+<br>
+
+## Exercice 1 : Importer les données
+
+a. Importez le jeu de données `pokemon.xlsx` à l'aide du package `readxl`.
+b. Combien de lignes, colonnes sont présentes dans ce dataset (utilisez les fonctions adaptées) ?
+c. Affichez le nom des colonnes.
+d. Affichez le type des colonnes avec la fonction adaptée.
+e. On souhaite analyser les variables `generation`, `is_legendary`, et `type` en tant que variables qualitatives. Modifier le type de ces variables pour les transformer en type factor.
+f. Combien de niveaux (*levels*) sont présents dans ces variables ?
+g. Affichez un résumé des données avec la fonction adaptée.
+
+
+## Exercice 2 : Statistiques descriptives
+
+a. Déterminer la moyenne de la variable `weight_kg`.
+b. Déterminer la médiane de la variable `weight_kg`.
+d. Déterminer les quartiles de la variable `height_m`.
+e. Déterminer les déciles de la variable `height_m`.
+f. Déterminer la variance et l'écart-type de la variable `weight_kg`.
+g. Déterminer un tri à plat pour compter les effectifs des modalités de chaque variable *factor* en triant chaque sortie par ordre décroissant.
+
+## Exercice 3 : Tris et Selections
+
+Pour chaque question suivante, affectez le résultat de la requête dans un objet puis calculez sa dimension. Exemple :
+
+```{r}
+#Selectionnez les deux premières colonnes du data frame
+requete_0 <- pokemon[,1:2]
+dim(requete_0)
+```
+
+a. Sélectionnez la colonne `nom` et `is_legendary`.
+b. Sélectionnez les 50 premières lignes et les deux premières colonnes.
+c. Sélectionnez les 10 premières lignes et toutes les colonnes.
+d. Sélectionnez toutes les colonnes sauf la dernière.
+e. Triez le dataset  par ordre alphabétique et afficher le `nom` du pokemon dela première ligne.
+f. Triez le dataset  par `weight_kg` en ordre **décroissant**, et afficher le `nom`du pokemon de la première ligne
+g. Triez le dataset  par `attack` en ordre **décroissant** puis par `speed` en ordre **croissant**, et afficher le `nom` des pokemons des 10 premières lignes.
+
+## Exercice 4 : Tris et Filtres
+
+Pour chaque question suivante, affectez le résultat de la requête dans un objet puis calculez sa dimension. Pour faciliter la lecture, sélectionnez la colonne `nom`et les colonnes concernées par le filtre. Exemple :
+
+```{r}
+#Selectionnez les pokemons de type feu
+requete_0 <- pokemon[ pokemon$type == "fire", c("nom","type")]
+dim(requete_0)
+```
+
+a. Filtrez sur les pokemons qui ont 150 ou plus d'`attack` puis trier le résultat par ordre décroissant d'`attack`. 
+b. Filtrez sur les pokemons de `type` *dragon*,*ghost*,*psychic* et *dark*
+c. Filtrez sur les pokemons de `type` *fire* avec plus de 100 d'`attack`, puis trier le résultat par ordre décroissant d'`attack`. 
+d. Filtrez sur les pokemons qui ont entre 100 et 150 de `speed`. Les trier par `speed` décroissant.
+e. Filtrez sur les pokémons qui ont des valeurs manquantes sur la variable `height_m`.
+f. Filtrez sur les pokemons qui ont des valeurs renseignées à la fois pour la variable `weight_kg` **et** la variable `height`.
+g. Filtrez sur les pokemons pesant plus de 250 kg et affichez le résultat pour vérifier.
+
+## Exercice 5 : Agrégations
+
+Pour chaque question suivante, affectez le résultat de la requête dans un objet puis calculez sa dimension. Exemple :
+
+```{r}
+#Calculez la vitesse moyenne par generation
+requete_0 <- aggregate(x = speed ~ generation, data = pokemon , FUN = mean)
+dim(requete_0)
+```
+
+a. Calculez l'`attack` moyenne en fonction de la variable `type`, puis filtrez sur les 3 types avec les moyennes les plus élevées.
+b. Calculez le nombre de pokemon par `type` , puis triez par ordre décroissant ces effectifs.
+c. Calculez la médiane de `weight_kg` par `type`.
+d. Calculez le nombre de pokemon par `type` et `generation`
+e. Calculez la moyenne de chaque critère (`weight_kg`, `height_m`, `attack`, `defense` et `speed`) en fonction de chaque `type`.
