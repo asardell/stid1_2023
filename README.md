@@ -7,3 +7,5 @@ Liste des ressources :
 * [CM/](./CM/) : support de présentation du module.
 * [TD1/](./TD1/) : sujet du TD1 et image du quiz.
 * [TP1/](./TP1/) : sujet du TP1 à rendre sur GitHub avant le cours suivant.
+* [TD2/](./TD2/) : sujet du TD2.
+* [TP2/](./TP2/) : sujet du TP2 à rendre sur GitHub avant le cours suivant.
