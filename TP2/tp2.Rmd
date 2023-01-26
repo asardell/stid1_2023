@@ -2,7 +2,7 @@
 title: | 
   | STID 1 - Programmation Statistique  
   | TP2
-  | Algorithmique
+  | Manipuler un dataframe
 author: "Anthony SARDELLITTI"
 output: 
   pdf_document:
