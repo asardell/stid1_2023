@@ -1,5 +1,7 @@
 # README
 
+TEST
+
 Ce repository est à disposition des étudiants de STID pour accéder aux contenus du cours de programmation statistique dans le cadre de la première année du BUT STID.
 Attention : il faut télécharger les pdf pour avoir accès aux liens.
 Liste des ressources : 
