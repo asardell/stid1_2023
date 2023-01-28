@@ -9,14 +9,13 @@ output:
     toc: true
     number_sections: true
     toc_depth: 3
+urlcolor: blue
 date: "2023-01-01"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
-
 
 # Utiliser GitHub
 
@@ -74,6 +73,37 @@ Depuis votre compte GitHub web.
 * [lien utile : tutoriel pull request](https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
 2. Effectuer un merge de vos deux branches à partir de votre pull request précédente.
 * [lien utile : tutoriel merge request](https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request)
+
+
+## Cheat Sheet - GitBash
+
+### Configurer la clé SSH
+
+1. Ouvrir l'application GitBash
+2. Changer le chemin vers le dossier dans lequel vous souhaitez configurer votre clé ssh :\ `cd "C:/Users/Anthony/Documents/SSH"`
+3. Générer la clé ssh :`ssh-keygen`
+4. Saisir `id_rsa` comme file name pour sauvegarder la clé ssh
+5. Entrer une passphrase qui permettra de se connecter à votre compte GitHub à chaque connexion
+6. Ajouter la clé en tant que nouvelle clé dans les paramètres de votre compte GitHub web (voir lien utile cité précédemment)
+7. Se connecter en local à votre compte GitHub : `eval "$(ssh-agent -s)"` puis `ssh-add ./id_rsa`
+8. Changer le chemin vers le dossier dans lequel vous souhaitez cloner votre repository : \`cd "C:/Users/Anthony/Documents/R"`
+9. Cloner votre repository distant par exemple : `git@github.com:asardell/stid1_2023.git`
+
+### Se connecter à Git au quotidien
+1. Ouvrir l'application GitBash
+2. Changer le chemin vers le dossier dans lequel vous avez stocké la clé ssh : `cd "C:/Users/Anthony/Documents/SSH"`
+3. Se connecter en local à votre compte GitHub : `eval "$(ssh-agent -s)"` puis `ssh-add ./id_rsa`
+4. Changer le chemin vers le dossier où est cloné votre repository : `cd "C:\Users\Anthony\Documents\R\stid1_2023"`
+
+### Utiliser les commandes de bases
+
+Voici quelques commandes de bases :
+
+* créer une branche : `git branch branch_name`
+* changer de branche : `git switch branch_name`
+* créer un commit : `git add .` puis `git commit -m "votre commentaire pour décrire la modification"`
+* pousser un commit : `git push origin branch_name`
+* mettre à jour votre repository local avec le repository distant : `git fetch`
 
 # Les bases de R
 

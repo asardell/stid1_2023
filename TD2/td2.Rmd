@@ -9,6 +9,7 @@ output:
     toc: true
     number_sections: true
     toc_depth: 3
+urlcolor: blue
 date: "2023-01-01"
 ---
 
