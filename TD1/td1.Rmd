@@ -40,10 +40,10 @@ Vous utiliserez ce compte pour tous les cours de programmation statistique.
 1. [Installer GitHub Desktop](https://desktop.github.com/)
 2. Un peu de lecture pour la suite [ici](https://docs.github.com/fr/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop)
 3. Cloner votre repository *programmation_r* sur votre machine
-4. Connecter à la branche *td1*
-5. Ajouter une modification à votre fichier **README.md**
-6. Faire un commit de cette modification sur votre branche *td1*
-7. Pousser le commit vers votre repository distant
+4. Connecter à la branche *td1* sur GitHub Desktop
+5. Ajouter une modification à votre fichier **README.md** directement dans le fichier dans votre dossier
+6. Faire un commit de cette modification sur votre branche *td1* sur GitHub Desktop
+7. Pousser le commit vers votre repository distant sur GitHub Desktop
 8. Vérifier si votre repository distant à pris en compte cette modification sur votre branche *td1*
 
 ### Option 2 : Avec GitBash (GOAT)
@@ -65,37 +65,31 @@ Vous utiliserez ce compte pour tous les cours de programmation statistique.
 4. Pousser le commit vers votre repository distant
 5. Vérifier si votre repository distant à pris en compte cette modification sur votre branche *td1*
 
-## Effectuer une pull request
+### Cheat Sheet - GitBash
 
-Depuis votre compte GitHub web.
-
-1. Effectuer une pull request de votre branche *td1* sur votre branch par défaut (*main* ou *master*).
-* [lien utile : tutoriel pull request](https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
-2. Effectuer un merge de vos deux branches à partir de votre pull request précédente.
-* [lien utile : tutoriel merge request](https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request)
-
-
-## Cheat Sheet - GitBash
-
-### Configurer la clé SSH
+#### Configurer la clé SSH
 
 1. Ouvrir l'application GitBash
-2. Changer le chemin vers le dossier dans lequel vous souhaitez configurer votre clé ssh :\ `cd "C:/Users/Anthony/Documents/SSH"`
+2. Changer le chemin vers le dossier dans lequel vous souhaitez configurer votre clé ssh : 
+`cd "C:/Users/Anthony/Documents/SSH"`
 3. Générer la clé ssh :`ssh-keygen`
 4. Saisir `id_rsa` comme file name pour sauvegarder la clé ssh
 5. Entrer une passphrase qui permettra de se connecter à votre compte GitHub à chaque connexion
 6. Ajouter la clé en tant que nouvelle clé dans les paramètres de votre compte GitHub web (voir lien utile cité précédemment)
 7. Se connecter en local à votre compte GitHub : `eval "$(ssh-agent -s)"` puis `ssh-add ./id_rsa`
-8. Changer le chemin vers le dossier dans lequel vous souhaitez cloner votre repository : \`cd "C:/Users/Anthony/Documents/R"`
+8. Changer le chemin vers le dossier dans lequel vous souhaitez cloner votre repository :
+`cd "C:/Users/Anthony/Documents/R"`
 9. Cloner votre repository distant par exemple : `git@github.com:asardell/stid1_2023.git`
 
-### Se connecter à Git au quotidien
+#### Se connecter à Git au quotidien
 1. Ouvrir l'application GitBash
-2. Changer le chemin vers le dossier dans lequel vous avez stocké la clé ssh : `cd "C:/Users/Anthony/Documents/SSH"`
+2. Changer le chemin vers le dossier dans lequel vous avez stocké la clé ssh :
+`cd "C:/Users/Anthony/Documents/SSH"`
 3. Se connecter en local à votre compte GitHub : `eval "$(ssh-agent -s)"` puis `ssh-add ./id_rsa`
-4. Changer le chemin vers le dossier où est cloné votre repository : `cd "C:\Users\Anthony\Documents\R\stid1_2023"`
+4. Changer le chemin vers le dossier où est cloné votre repository :
+`cd "C:\Users\Anthony\Documents\R\stid1_2023"`
 
-### Utiliser les commandes de bases
+#### Utiliser les commandes de bases
 
 Voici quelques commandes de bases :
 
@@ -105,6 +99,15 @@ Voici quelques commandes de bases :
 * créer un commit : `git add .` puis `git commit -m "votre commentaire pour décrire la modification"`
 * pousser un commit : `git push origin branch_name`
 * mettre à jour votre repository local avec le repository distant : `git fetch`
+
+## Effectuer une pull request
+
+Depuis votre compte GitHub web.
+
+1. Effectuer une pull request de votre branche *td1* sur votre branch par défaut (*main* ou *master*).
+* [lien utile : tutoriel pull request](https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
+2. Effectuer un merge de vos deux branches à partir de votre pull request précédente.
+* [lien utile : tutoriel merge request](https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request)
 
 # Les bases de R
 
