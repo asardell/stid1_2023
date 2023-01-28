@@ -101,6 +101,7 @@ Voici quelques commandes de bases :
 
 * créer une branche : `git branch branch_name`
 * changer de branche : `git switch branch_name`
+* mettre à jour la branche en local avec la branche distante : `git pull origin branch_name`
 * créer un commit : `git add .` puis `git commit -m "votre commentaire pour décrire la modification"`
 * pousser un commit : `git push origin branch_name`
 * mettre à jour votre repository local avec le repository distant : `git fetch`
