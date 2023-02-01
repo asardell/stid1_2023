@@ -31,11 +31,7 @@ Pour réaliser ce TP, vous aurez besoin des ressources suivantes :
 
 # Exercices
 
-Pour rendre ce TP, voici les étapes à suivre :
-
-1. Créer une branche **tp2** sur votre repository github que vous avez déjà ouvert. Le tp sera pousser dans cette branche
-2. Dans cette branche, créer un dossier **tp2** dans lequel vous pourrez pousser le script avec votre code
-3. Si vous ne l'avez pas fait pour le TP1, partagez votre repository. Si vous êtes en public, envoyer le lien de votre repository par mail à *anthony.sardellitti@hotmail.fr* **OU** si vous êtes en privé, ajouter cette adresse mail en tant que collaborateur de votre repository. 
+Pour rendre ce TP, vous pouvez envoyer un mail à *anthony.sardellitti@hotmail.fr* **OU** compléter votre repository GitHub.
 
 Pensez à commenter votre code.
 
@@ -44,7 +40,7 @@ Pensez à commenter votre code.
 </p>
 
 On utilise  le fichier `pokemon.xlsx` qui décrit les statistiques des pokemon des deux premières générations.
-Le fichier est issu du site [ Kaggle ](https://www.kaggle.com/rounakbanik/pokemon). Il a été adapté pour ce TP. Pour réaliser ce TP, télécharger le fichier en [cliquant ici](./dataset/pokemon.xlsx). Voici une description des données :
+Le fichier est issu du site [ Kaggle ](https://www.kaggle.com/rounakbanik/pokemon). Il a été adapté pour ce TP. Pour réaliser ce TP, télécharger le fichier en [cliquant ici](https://github.com/asardell/stid1_2023/tree/main/TP2/dataset). Voici une description des données :
 
 - `pokedex_number` : numéro du pokemon
 - `nom` : nom du pokemon
