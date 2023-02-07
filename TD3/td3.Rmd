@@ -1,0 +1,68 @@
+---
+title: | 
+  | STID 1 - Programmation Statistique  
+  | TD3
+  | Importer des données
+author: "Anthony SARDELLITTI"
+output: 
+  pdf_document:
+    toc: true
+    number_sections: true
+    toc_depth: 3
+urlcolor: blue
+date: "2023-01-01"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Ressources documentaires
+
+Pour réaliser ce TD, vous aurez besoin des ressources suivantes :
+
+- [Importer un fichier csv](https://asardell.github.io/programmation-r/first-import.html#import-de-fichiers-csv)
+- [Modifier le répertoire par défaut](https://asardell.github.io/programmation-r/first-import.html#modifier-le-r%C3%A9pertoire-actif)
+- [Filtres et sélection](https://asardell.github.io/programmation-r/manipulation-objet.html#filtre-et-s%C3%A9lection-dans-un-data-frame)
+- [Trier](https://asardell.github.io/programmation-r/manipulation-objet.html#trier-un-data-frame)
+- [Agréger](https://asardell.github.io/programmation-r/manipulation-objet.html#agr%C3%A9ger-des-donn%C3%A9es)
+- [Les types de graphique](https://asardell.github.io/programmation-r/graphique.html#type-de-graphique)
+
+# Exercice 1 : Importer les données
+
+Vous utiliserez dans ce TD les résultats de quiz Kahoot 2022. Ils ont été anonymisés. Il y a un fichier csv par quiz
+Attention, les questions ci-dessous vont vous contraindre d'utiliser les arguments des fonctions d'importations. Soyez vigilant. Nous vous conseillons de vérifier vos résultats avec la fonction `View()`.
+
+a. Importer le dataset `quiz1.csv` dans un objet appelé `quiz1` avec la fonction `read.csv( )` uniquement.
+b. Importer le dataset `quiz2.csv` dans un objet appelé `quiz2` avec la fonction `read.csv( )` uniquement.
+c. Importer le dataset `quiz3.csv` dans un objet appelé `quiz3` avec la fonction `read.csv( )` uniquement.
+d. Importer le dataset `quiz4.csv` dans un objet appelé `quiz4` avec la fonction `read.csv( )` uniquement.
+
+
+# Exercice 2 : Compiler les données
+
+a. Compiler l'ensemble des dataframe *quiz* dans un seul et même data frame appelé `quiz_final`. La fonction `rbind()` devrait vous aider (voir l'exemple ci-dessous). 
+<br> 
+
+```{r}
+df <- data.frame()
+dim(df)
+df <- rbind(df, mtcars)
+dim(df)
+df <- rbind(df, mtcars)
+dim(df)
+```
+
+b. Modifier votre script de la question précédente afin d'ajouter dans le data frame, une colonne appelée  `numero_quiz` qui renseigne le numéro du quiz (1,2,3 ou 4). 
+
+# Exercice 3 : Analyses statistiques
+
+a. Déterminer la moyenne du nombre de points.
+b. Déterminer les quartiles du temps moyen de réponse.
+c. Constuire un boxplot de la distribution du temps moyen de réponse
+d. Constuire un histogramme de la distribution du nombre de points
+e. Calculer la répartition du nombre de participant par groupe
+f. Représenter cette répartition dans un diagramme en barre
+g. Calculer la moyenne agrégée pour groupe quiz. 
+h. Représenter graphiquement cette différence avec un boxplot bivarié
+i. Calculer le nombre total de points de chaque joueur et afficher le podium.
