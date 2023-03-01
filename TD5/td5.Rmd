@@ -1,0 +1,22 @@
+---
+title: | 
+  | STID 1 - Programmation Statistique  
+  | TD5
+  | Représentation graphique et agrégation
+author: "Anthony SARDELLITTI"
+output: 
+  pdf_document:
+    toc: true
+    number_sections: true
+    toc_depth: 3
+urlcolor: blue
+date: "2023-01-01"
+---
+
+# Représentation Graphique
+
+Dans le cours, vous devez parcourir le chapitre sur [les graphiques](https://asardell.github.io/programmation-r/graphique.html)
+
+# Agréger les données
+
+Dans le cours, vous devez parcourir le chapitre sur [les agrégations](https://asardell.github.io/programmation-r/manipulation-objet.html#agr%C3%A9ger-des-donn%C3%A9es)
